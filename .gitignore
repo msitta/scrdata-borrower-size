@@ -24,3 +24,5 @@ notebooks/*.md
 *.egg-info/
 build/
 dist/
+creditlens.pbix
+Untitled-1.ipynb
