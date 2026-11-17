@@ -186,8 +186,8 @@ break.
 
 **The segments under study are small.** At the median, `Fintech` is 0.05% of national business
 credit and `Instituição de pagamento` 0.03%. Small denominators are exactly why the
-stability filter exists, and the filter is why 19 fintech months and 26
-payment-institution months are excluded rather than plotted. It does not make the
+stability filter exists, and the filter is why 13 of the 84 fintech months and
+14 of the 78 payment-institution months are excluded rather than plotted. It does not make the
 segments large.
 
 **The stability criterion is denominated in contracts while the series is
