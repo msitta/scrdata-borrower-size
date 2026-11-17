@@ -173,6 +173,8 @@ That breaks the chart for anyone reading it printed in greyscale, on a monochrom
 
 **What would change my mind:** a December without the peak, or a year where one product explains the whole move.
 
+> **Amended on 2026-11-17:** the largest single move is not `Outros créditos` at +1.97 pp. It is a fall, in a product that holds 0.08% of the book; `Outros créditos` has the largest rise. Check 3 in section 4.1 of the notebook now shows all thirteen products. The conclusion holds.
+
 ---
 
 ## 2026-09-11 — The V1→V2 methodology transition does not affect this series
@@ -193,17 +195,77 @@ That breaks the chart for anyone reading it printed in greyscale, on a monochrom
 
 **What would change my mind:** the Central Bank publishing a changelog that contradicts point 3, or a republication of the annual archives that changes the volumes in point 2. Both are checkable by re-running the ingestion and diffing the log.
 
+> **Amended on 2026-11-17:** point 2 called both months "inside ordinary month-to-month variation". For the whole file they are not: they are the two largest shifts in the composition of the file across the series (section 1.1 of the notebook). What holds is narrower. Rows retained, the business slice this analysis uses, move by about 1% in both months, so the change sat mostly outside business credit. The conclusion of this entry rests on that narrower fact and on points 1 and 3.
+
+---
+
+## 2026-11-17 - Number audit of the notebook, the README and this log
+
+*Run between 2026-10-12 and 2026-11-17 on the branch `fix/number-audit`.*
+
+**Why:** every figure in the README, in this log, in the notebook and in `archive/README.md` was recalculated in DuckDB on `scrdata_pj_br.parquet`, downloaded on 2026-08-25. Several were wrong. The notebook had also been published without outputs, so no figure in its prose had an output behind it.
+
+**How the corrections were made.** In the notebook, each correction was made in place and declared in a dated line next to it ("Corrected on ..."), and the notebook now carries all its outputs. In the README, corrections were made in place without notes in the text, because the README is read first and a page of notes would bury the finding; this entry is the record. `archive/README.md` follows its own rule and carries a dated note. Earlier entries of this log are amended, not rewritten.
+
+**Notebook:**
+
+| Section | Correction | Commits |
+|---|---|---|
+| 2 | "roughly fifteenfold" kept and labelled "on average" (14.7); a new cell prints the national-to-Paraná ratio month by month | `2025650` |
+| 3 | `Cooperativa` at 6.3% of the market labelled as a median | `9bc90f3` |
+| 4 | Bank range: low 1.3% (May 2021), 1.7% to 5.6% over the last four years; "a factor of more than eleven", not ten; bank and fintech compared over the same stretch, August 2020 to June 2026 | `1c2aece`, `b6c73eb`, `67d4809` |
+| 4.1 | December 2023: +30.1%; the December step grows until 2023 and shrinks after; Check 1 step +0.90 pp; Check 2 subtracts before rounding (0.10, 0.52, 0.49); Check 3 shows all thirteen products, and the step splits into a rate effect of 0.87 pp and a mix effect of 0.03 pp | `1c2aece`, `653d0d2`, `496c1b6`, `952c5f0`, `11282f6` |
+| 5 | Bank contract floor at least 17.4 million a month (19.7 million at the median), not "a million"; the criterion excludes 13 of the 84 fintech months, not "a fifth"; payment institutions never held more than 0.21% of the market | `2ddb909`, `cbaf555`, `9bc90f3` |
+| 7 | The July 2025 test compares July with the bottom of a three-month dip (April to June 2025). It does not show a structural break, and the 40.3% headline needs no asterisk. June 2025 is 30.58%, not "just under 30%" | `499f64a` |
+| 8 | Bank low 1.3% (May 2021); a check for large contracts in the fintech segment added | `fded29f` |
+
+**README:**
+
+| Correction | Commit |
+|---|---|
+| The finding table's value column is outstanding credit **with size on file**, not total outstanding. Under the old label a reader computed 1.4 / 2.1 = 67% instead of 40.3% | `addcad5` |
+| Market shares (0.05%, 0.03%, 76.7%) labelled as medians for 2019-2026 | `0cd1fb4` |
+| Bank line: low 1.3% (May 2021), 1.7% to 5.6% over the last four years, 3.1% in June 2026 | `984451b` |
+| The control-group comparison uses August 2020 to June 2026 (bank 1.71% to 3.07%, fintech 4.99% to 40.34%), not the July 2025 cut | `90bad86` |
+| The filter excludes 13 of the 84 fintech months and 14 of the 78 payment-institution months, not 19 and 26 | `3b39ee6` |
+| March 2019 and July 2025 changed the composition of the file, not the business slice | `1c06842` |
+
+**`archive/README.md`:** the nationwide bank line runs from 1.3%, a factor of more than eleven (`64199bb`).
+
+**The stopping rule.** An audit that follows every new question never ends. From 2026-10-31, a new finding entered the repository only if one of two conditions held:
+
+1. without it, a published sentence is wrong;
+2. it is the output that supports a correction.
+
+Everything else became, at most, one line in section 8 of the notebook, and was not investigated. Applied to July 2025:
+
+| Finding | Enters? | Why |
+|---|---|---|
+| Fintech series month by month around July 2025 | Yes | It is the output behind the corrected reading of section 7 (condition 2) |
+| June 2025 at 30.58%, not "just under 30%" | Yes | The published figure was wrong (condition 1) |
+| Business rows by segment in July 2025: the fintech segment did not lose rows | No | No published sentence depends on it |
+| Fewer fintech cells with no size on file, but more value in each | No; already in section 8 as the counts-versus-value test | A test of a hypothesis, not a correction |
+| Large contracts moving a small book | No; one line in section 8 | A hypothesis |
+
+**One error was the audit's own.** It first marked "fifteenfold" as wrong against the median ratio (14.0). The sentence holds as an average (14.7). Checking what a sentence claims comes before checking its number.
+
+**What would change my mind:** a new download of SCR.data. The Central Bank revises closed months, so these figures hold for the download of 2026-08-25. A new download means re-running the notebook and repeating these checks.
+
 ---
 
 ## Open
 
 **Unexplained movement in July 2025 on the bank line.** Downgraded from a veto condition to an observation. The entry above establishes that the file composition did not change materially that month, so whatever moved is in the data rather than in the collection. Across the cut, `Banco` moves 0.32 pp while `Fintech` moves 8.52 pp and `Instituição de pagamento` moves 3.83 pp — an order of magnitude apart, which is why the bank remains usable as a reference. It is still movement in what should be inert, and it is still unexplained. Declared as a caveat in the README; not a reason to withhold the finding.
 
+> **Amended on 2026-11-17:** "the file composition did not change materially that month" is wrong for the whole file (see the amendment to the V1→V2 entry); what barely changed is the business slice. The fintech move of 8.52 pp compares July with the bottom of a three-month dip (section 7 of the notebook, corrected on 2026-10-31), so it is no longer used as evidence for the bank as a reference. The README now compares both lines from August 2020 to June 2026: bank 1.71% to 3.07%, fintech 4.99% to 40.34%.
+
 **A June 2024 discontinuity in fintech contract counts.** Located by the stability diagnosis. The volume checks in the entry above were run on whole monthly files, not on fintech cells, so they do not speak to this. Open.
 
 **Stability criterion denominated in contracts, series denominated in value.** The threshold is expressed in contract counts while the line it filters is expressed in outstanding balance. The mismatch is deliberate — contracts are the right unit for asking whether a proportion is stable — but it bites hardest where value concentrates in few large contracts, which is the payment-institution case: that segment's mean `max_shift_pp` is 2.99 against the fintech's 0.055. A value-denominated criterion is the planned fix.
 
 **Excluded months mix two different things.** Of the 19 fintech months not plotted, some are months the segment has no data for at all (84 segment-months exist out of 90) and the rest are months the criterion rejects. The chart draws the raw series faintly underneath the filtered one so the difference is visible, but the counts in the README do not separate the two causes.
+
+> **Amended on 2026-11-17:** closed. The README now separates the two causes: the filter excludes 13 of the 84 fintech months and 14 of the 78 payment-institution months; the remaining months have no data for the segment.
 
 **Delinquency spread hypothesis.** Comparing delinquency rates between the `porte` informed and `porte indisponível` groups, within each segment and month. Deprioritised, not rejected. A naive time-series correlation here would be spurious — common trend, shared denominator, compositional confounding by segment — so the correct form is a segment-controlled spread on first differences. Out of scope until the core deliverable ships.
 
