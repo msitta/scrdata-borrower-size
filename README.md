@@ -63,7 +63,7 @@ times the bank rate.
 The second reading contradicts the headline, and belongs here rather than buried.
 **In absolute value, banks hold by far the most credit with no size on file —
 R$ 67.8 bn against the fintech segment's R$ 1.4 bn.** Fintechs hold 0.05% of
-national business credit. Anyone sizing a market from the fintech line alone would
+national business credit at the median. Anyone sizing a market from the fintech line alone would
 be sizing something very small.
 
 This project is about the *rate and its trajectory*, not the volume. The rate is
@@ -112,7 +112,7 @@ here is therefore a floor and every displacement figure a ceiling: the finding i
 stated against itself.
 
 **A control group that moves, but an order of magnitude less.** Banks hold 76.7% of
-national business credit. Their unavailable-size share is not flat — it ran at
+national business credit at the median. Their unavailable-size share is not flat — it ran at
 14.7% in December 2019, fell below 2% through 2020–21, and has climbed back to
 3.1%. What matters is the comparison: across the July 2025 cut-off, the `Banco`
 line moves 0.32 pp while `Fintech` moves 8.52 pp. A shared shock that hit every
@@ -121,7 +121,7 @@ lender would not produce that ratio.
 **A stability criterion that applies to everyone — and replaced a worse one.** The
 first cut-off was a 1% market-share floor. It was discarded before production: it
 excluded segments for being *small* rather than *unstable*, and `Fintech` holds
-0.05% of business credit while being the entire subject of the analysis. The rule
+0.05% of business credit at the median while being the entire subject of the analysis. The rule
 now admits a segment-month only where a single contract cannot shift the proportion
 by more than 0.1 percentage points. Applied identically to every segment: it keeps
 all 90 bank months, 71 fintech months, and 64 payment-institution months.
@@ -184,7 +184,7 @@ break.
 
 ## What this project does not claim
 
-**The segments under study are small.** `Fintech` is 0.05% of national business
+**The segments under study are small.** At the median, `Fintech` is 0.05% of national business
 credit and `Instituição de pagamento` 0.03%. Small denominators are exactly why the
 stability filter exists, and the filter is why 19 fintech months and 26
 payment-institution months are excluded rather than plotted. It does not make the
