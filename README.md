@@ -33,7 +33,7 @@ rows, 10.3 million business-borrower rows retained.
 In June 2026, the share of outstanding business credit with **no borrower size on
 file** splits sharply by type of lender:
 
-| Segmento | Outstanding, BRL bn | No size on file, BRL bn | Share with no size | Months passing the filter |
+| Segmento | With size on file, BRL bn | No size on file, BRL bn | Share with no size | Months passing the filter |
 |---|---:|---:|---:|---:|
 | Fintech | 2.1 | 1.4 | **40.3%** | 71 of 90 |
 | Instituição de pagamento | 5.7 | 0.5 | 8.0% | 64 of 90 |
