@@ -26,11 +26,13 @@ became 3.1% / 8.0% / 40.3% nationwide.
 
 **It is the evidence for an amendment.** This notebook reads the bank line as
 flat at around 2% for seven years and calls it close to a perfect control group.
-Nationwide that is false — the line runs from roughly 1.4% to 14.7%. The error
+Nationwide that is false — the line runs from roughly 1.3% to 14.7%. The error
 was not carelessness; it is what the Paraná data actually looks like. Keeping the
 outputs keeps the proof that a line can look immobile at one scale and move by a
-factor of ten at another. Deleting the file would leave the amendment in
+factor of more than eleven at another. Deleting the file would leave the amendment in
 `DECISIONS.md` asserting something no longer checkable.
+
+> **Corrected on 2026-11-17:** "roughly 1.4%" is now "roughly 1.3%", and "a factor of ten" is now "a factor of more than eleven". Section 4 of the current notebook prints the nationwide bank line's low as 1.26% (May 2021) and its high as 14.71% (December 2019); 14.71 ÷ 1.26 = 11.7.
 
 **Its section 8 was recovered, not replaced.** The sensitivity analysis —
 recomputing the whole conclusion under several ceilings, including no filter at
