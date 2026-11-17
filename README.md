@@ -160,10 +160,12 @@ It was treated as a veto condition. Three independent lines closed it:
    annual archives from the current endpoint for every year 2019–2026 in a single
    run. All 90 months were served by the publication pipeline as it stands today.
    There is no seam between two vintages, because only one was ever downloaded.
-2. **No structural break in the volumes.** At the two dates under suspicion, rows
-   read move by +5.1% (March 2019) and −4.6% (July 2025), while rows retained move
-   by +1.1% and −1.0%. That is ordinary month-to-month variation. A change in
-   collection scope would not be invisible at this level.
+2. **No break in the business slice.** At the two dates under suspicion, rows
+   read move by +5.1% (March 2019) and −4.6% (July 2025), the two largest shifts in
+   the composition of the file across the series (section 1.1 of the notebook).
+   Rows retained, the business slice this analysis uses, move by only +1.1% and
+   −1.0%. The file changed shape in those months; what changed was mostly outside
+   business credit. The data available does not say why.
 3. **The one dated rule in the current methodology does not touch these fields.**
    From January 2025, only operations flagged by the institution as problem assets
    are counted. That governs `ativo_problematico`. This analysis measures `porte`
@@ -197,7 +199,7 @@ concentrates in few large contracts, which is the payment-institution case. A
 value-denominated criterion is the planned fix.
 
 **Unexplained movement in July 2025 on the bank line.** The evidence above
-establishes that file composition did not change that month. The bank line moves
+establishes that the business slice of the file barely changed that month. The bank line moves
 0.32 pp across the cut, an order of magnitude below the fintech move, but it is
 movement in what should be an inert control and it is not explained.
 
