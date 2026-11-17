@@ -275,6 +275,9 @@ that would reverse it. It includes the project's original hypothesis, which was
 tested and did not survive, and two cut-off criteria, one of which was discarded
 before it reached production.
 
+The figures in this README, the notebook and the log were audited between October and
+November 2026. Every correction is listed in the `DECISIONS.md` entry of 2026-11-17.
+
 ---
 
 ## Reproducing
