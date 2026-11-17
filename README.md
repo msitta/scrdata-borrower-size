@@ -113,8 +113,8 @@ stated against itself.
 
 **A control group that moves, but an order of magnitude less.** Banks hold 76.7% of
 national business credit at the median. Their unavailable-size share is not flat — it ran at
-14.7% in December 2019, fell below 2% through 2020–21, and has climbed back to
-3.1%. What matters is the comparison: across the July 2025 cut-off, the `Banco`
+14.7% in December 2019, fell to 1.3% in May 2021, and over the last four years has
+moved between 1.7% and 5.6%, standing at 3.1% in June 2026. What matters is the comparison: across the July 2025 cut-off, the `Banco`
 line moves 0.32 pp while `Fintech` moves 8.52 pp. A shared shock that hit every
 lender would not produce that ratio.
 
