@@ -111,10 +111,10 @@ would have biased the filter against fintechs for the wrong reason. Every count
 here is therefore a floor and every displacement figure a ceiling: the finding is
 stated against itself.
 
-**A control group that moves, but an order of magnitude less.** Banks hold 76.7% of
+**A control group that moves, but an order of magnitude less.** Banks hold 76.73% of
 national business credit at the median. Their unavailable-size share is not flat — it ran at
-14.7% in December 2019, fell to 1.3% in May 2021, and over the last four years has
-moved between 1.7% and 5.6%, standing at 3.1% in June 2026. What matters is the comparison: from August 2020 to June 2026, the `Banco`
+14.71% in December 2019, fell to 1.26% in May 2021, and over the last four years has
+moved between 1.69% and 5.57%, standing at 3.07% in June 2026. What matters is the comparison: from August 2020 to June 2026, the `Banco`
 line goes from 1.71% to 3.07% while `Fintech` goes from 4.99% to 40.34%. A shared
 shock that hit every lender would not produce that gap.
 
